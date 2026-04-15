@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildYeast | The Elevated Laboratory of Sourdough</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <span class="logo-text">WILDYEAST</span>
+        </div>
+        <div class="nav-links">
+            <a href="#kit" class="nav-link">THE KIT</a>
+            <a href="#subscription" class="nav-link">SUBSCRIPTION</a>
+            <a href="#join" class="nav-btn">JOIN THE WAITLIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="tag-badge">EST. 2026</div>
+            <h1 class="hero-title">THE PERFECT RISE. <br>SHIPPED NATIONWIDE.</h1>
+            <p class="hero-subtitle">Stop guessing. Start baking with chef-grade live cultures and stone-milled heritage grains. The precision of a lab meets the soul of a micro-bakery.</p>
+            <div class="hero-cta-group">
+                <form id="hero-form" class="waitlist-form">
+                    <input type="email" name="email" placeholder="ENTER YOUR EMAIL" required>
+                    <button type="submit" class="cta-primary">SECURE YOUR STARTER</button>
+                </form>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <img src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=1000,height=1000/gradient-assets/8658850/89312217-0941-432d-8854-46961ea33550" alt="WildYeast Sourdough Starter Kit" class="hero-img">
+        </div>
+    </header>
+
+    <section id="kit" class="section grid-section">
+        <div class="grid-card">
+            <div class="card-image">
+                <img src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=1000,height=1000/gradient-assets/8658850/3938be98-967b-4020-a6a7-0df75a024707" alt="Live Starter">
+            </div>
+            <h3 class="card-title">LIVE CULTURE</h3>
+            <p class="card-text">Never deal with dead dehydrated packets again. We ship active, bubbly, chef-grade starter in cold-chain logistics.</p>
+        </div>
+        <div class="grid-card accent-card">
+            <div class="card-image">
+                <img src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=1000,height=1000/gradient-assets/8658850/047f2ea9-e85d-4566-a602-ef68194458f2" alt="Heritage Grains">
+            </div>
+            <h3 class="card-title">HERITAGE GRAINS</h3>
+            <p class="card-text">Monthly rotations of Einkorn, Spelt, and Rye from Janie's Mill. Stone-milled for peak microbial health.</p>
+        </div>
+        <div class="grid-card">
+            <div class="card-image">
+                <img src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=1000,height=1000/gradient-assets/8658850/746cc46a-73c3-41c3-8a39-a5486be2e848" alt="Professional Results">
+            </div>
+            <h3 class="card-title">LAB PRECISION</h3>
+            <p class="card-text">Borosilicate glass jars and silicone marking bands ensure you track growth with mathematical certainty.</p>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="banner-text">99% ARRIVAL VIABILITY GUARANTEED — SHIPPED MONDAYS & TUESDAYS ONLY — HERITAGE GRAIN SUBSCRIPTIONS — JOIN 5,000+ HOME BAKERS</div>
+    </section>
+
+    <section id="join" class="waitlist-section">
+        <div class="waitlist-box">
+            <h2 class="section-title">JOIN THE FOUNDER'S BATCH</h2>
+            <p class="section-subtitle">We are launching 100 kits this month. Get notified the second we go live.</p>
+            <form id="footer-form" class="footer-waitlist">
+                <input type="email" name="email" placeholder="YOUR EMAIL ADDRESS" required>
+                <button type="submit" class="cta-secondary">GET ACCESS</button>
+            </form>
+            <p id="form-msg" class="form-status"></p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">WILDYEAST</div>
+            <div class="footer-meta">COPYRIGHT 2026 — BAKING REDEFINED</div>
+        </div>
+    </footer>
+
+    <script>
+        const handleForm = async (e) => {
+            e.preventDefault();
+            const email = e.target.email.value;
+            const msg = document.getElementById('form-msg');
+            
+            try {
+                const response = await fetch('https://baget.ai/api/public/databases/wildyeast-waitlist/rows', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ data: { email, source: 'landing_page', name: 'Subscriber' } })
+                });
+                
+                if (response.ok) {
+                    e.target.reset();
+                    alert('THANKS. YOU ARE ON THE LIST.');
+                } else {
+                    alert('SOMETHING WENT WRONG. TRY AGAIN.');
+                }
+            } catch (err) {
+                alert('CONNECTION ERROR.');
+            }
+        };
+
+        document.getElementById('hero-form').addEventListener('submit', handleForm);
+        document.getElementById('footer-form').addEventListener('submit', handleForm);
+    </script>
+</body>
+</html>
