@@ -6,6 +6,8 @@
     --white: #FFFFFF;
     --border-width: 4px;
     --shadow: 4px 4px 0px #000000;
+    --font-mono: 'Space Mono', monospace;
+    --font-sans: 'Work Sans', sans-serif;
 }
 
 * {
@@ -17,12 +19,13 @@
 body {
     background-color: var(--cream);
     color: var(--black);
-    font-family: 'Work Sans', sans-serif;
+    font-family: var(--font-sans);
     overflow-x: hidden;
+    line-height: 1.4;
 }
 
-h1, h2, h3, .logo-text, .protocol-number, .tier-price {
-    font-family: 'Space Mono', monospace;
+h1, h2, h3, h4, .logo-text, .protocol-number, .tier-price, .stat-value, .stat-label, .ingredient-name, .step-title {
+    font-family: var(--font-mono);
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -96,7 +99,7 @@ h1, h2, h3, .logo-text, .protocol-number, .tier-price {
     color: var(--cream);
     display: inline-block;
     padding: 0.3rem 0.8rem;
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono);
     font-weight: 700;
     font-size: 0.8rem;
     margin-bottom: 2rem;
@@ -125,7 +128,7 @@ h1, h2, h3, .logo-text, .protocol-number, .tier-price {
     flex: 1;
     padding: 1.2rem;
     border: var(--border-width) solid var(--black);
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono);
     font-weight: 700;
     font-size: 1rem;
     outline: none;
@@ -137,7 +140,7 @@ h1, h2, h3, .logo-text, .protocol-number, .tier-price {
     padding: 1rem 2rem;
     border: var(--border-width) solid var(--black);
     border-left: none;
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono);
     font-weight: 700;
     cursor: pointer;
     box-shadow: var(--shadow);
@@ -163,9 +166,224 @@ h1, h2, h3, .logo-text, .protocol-number, .tier-price {
     box-shadow: 12px 12px 0px #000;
 }
 
-/* Protocol Section */
-.how-it-works {
+/* Lab Section */
+.lab-section {
     padding: 6rem 2rem;
+    background: var(--white);
+    border-bottom: var(--border-width) solid var(--black);
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.viz-img {
+    width: 100%;
+    border: var(--border-width) solid var(--black);
+    box-shadow: var(--shadow);
+}
+
+.lab-intro {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.stat-item {
+    border: var(--border-width) solid var(--black);
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2rem;
+    color: var(--blue);
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+}
+
+.lab-callout {
+    background: var(--cream);
+    padding: 2rem;
+    border: var(--border-width) solid var(--black);
+    box-shadow: var(--shadow);
+}
+
+.callout-title {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+/* Ingredients Section */
+.ingredients-section {
+    padding: 6rem 2rem;
+    border-bottom: var(--border-width) solid var(--black);
+}
+
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto 0;
+}
+
+.ingredient-card {
+    background: var(--white);
+    border: var(--border-width) solid var(--black);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: var(--border-width) solid var(--black);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.ingredient-meta {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 1rem;
+}
+
+.ingredient-desc {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.spec-list {
+    border-top: 2px solid var(--black);
+    padding-top: 1rem;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* Shipping Section */
+.shipping-section {
+    padding: 6rem 2rem;
+    background: var(--black);
+    color: var(--white);
+    border-bottom: var(--border-width) solid var(--black);
+}
+
+.shipping-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.shipping-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.shipping-header .section-title {
+    color: var(--black);
+    background: var(--blue);
+}
+
+.shipping-subtitle {
+    font-family: var(--font-mono);
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+.shipping-viz {
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.shipping-img {
+    width: 100%;
+    border: var(--border-width) solid var(--white);
+}
+
+.viz-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-item {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.overlay-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--blue);
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.overlay-text {
+    background: var(--black);
+    border: 2px solid var(--white);
+    padding: 0.4rem 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.shipping-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.shipping-step {
+    border: 2px solid var(--white);
+    padding: 2rem;
+}
+
+.step-title {
+    color: var(--blue);
+    margin-bottom: 1rem;
+}
+
+/* Tiers Section */
+.tiers-section {
+    padding: 6rem 2rem;
+    background: var(--white);
     border-bottom: var(--border-width) solid var(--black);
 }
 
@@ -181,49 +399,6 @@ h1, h2, h3, .logo-text, .protocol-number, .tier-price {
     border: var(--border-width) solid var(--black);
     background: var(--white);
     box-shadow: var(--shadow);
-}
-
-.protocol-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.protocol-card {
-    background: var(--white);
-    border: var(--border-width) solid var(--black);
-    padding: 3rem 2rem;
-    box-shadow: var(--shadow);
-}
-
-.protocol-card.accent {
-    background: var(--blue);
-    color: var(--white);
-}
-
-.protocol-number {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-    opacity: 0.3;
-}
-
-.protocol-heading {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.protocol-text {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* Tiers Section */
-.tiers-section {
-    padding: 6rem 2rem;
-    background: var(--white);
-    border-bottom: var(--border-width) solid var(--black);
 }
 
 .tiers-grid {
@@ -252,7 +427,7 @@ h1, h2, h3, .logo-text, .protocol-number, .tier-price {
 .tier-badge {
     background: var(--black);
     color: var(--white);
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono);
     font-size: 0.7rem;
     font-weight: 700;
     padding: 0.2rem 0.5rem;
@@ -275,23 +450,6 @@ h1, h2, h3, .logo-text, .protocol-number, .tier-price {
     opacity: 0.6;
 }
 
-.tier-desc {
-    margin-bottom: 2rem;
-    font-weight: 500;
-}
-
-.tier-features {
-    list-style: none;
-    margin-top: auto;
-}
-
-.tier-features li {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.85rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-}
-
 /* Ticker */
 .ticker {
     background: var(--black);
@@ -308,7 +466,7 @@ h1, h2, h3, .logo-text, .protocol-number, .tier-price {
 }
 
 .ticker-item {
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono);
     font-weight: 700;
     font-size: 1.5rem;
     margin-right: 4rem;
@@ -348,7 +506,7 @@ h1, h2, h3, .logo-text, .protocol-number, .tier-price {
     flex: 1;
     padding: 1.2rem;
     border: var(--border-width) solid var(--black);
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono);
     font-weight: 700;
     font-size: 1rem;
     outline: none;
@@ -360,17 +518,10 @@ h1, h2, h3, .logo-text, .protocol-number, .tier-price {
     padding: 1rem 2.5rem;
     border: var(--border-width) solid var(--black);
     border-left: none;
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono);
     font-weight: 700;
     cursor: pointer;
     box-shadow: var(--shadow);
-}
-
-.status-msg {
-    margin-top: 2rem;
-    font-family: 'Space Mono', monospace;
-    font-weight: 700;
-    font-size: 1.2rem;
 }
 
 /* Footer */
@@ -389,25 +540,26 @@ h1, h2, h3, .logo-text, .protocol-number, .tier-price {
 }
 
 .footer-brand {
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono);
     font-weight: 700;
     font-size: 2rem;
 }
 
 .footer-legal {
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono);
     font-size: 0.7rem;
     opacity: 0.6;
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .hero { grid-template-columns: 1fr; }
+    .hero, .section-grid { grid-template-columns: 1fr; }
     .hero-content { border-right: none; border-bottom: var(--border-width) solid var(--black); }
-    .protocol-grid, .tiers-grid { grid-template-columns: 1fr; }
+    .ingredients-grid, .shipping-grid, .tiers-grid { grid-template-columns: 1fr; }
     .tier-card.highlight { transform: none; }
     .hero-title { font-size: 3rem; }
     .cta-title { font-size: 2.5rem; }
+    .shipping-viz { display: none; } /* Hide complex viz on mobile */
 }
 
 @media (max-width: 600px) {
