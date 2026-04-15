@@ -55,10 +55,10 @@
             <span class="logo-text">WILDYEAST</span>
         </div>
         <div class="nav-links">
+            <a href="story.html" class="nav-link">OUR STORY</a>
             <a href="#lab-report" class="nav-link">BIOLOGY</a>
             <a href="#ingredients" class="nav-link">INPUTS</a>
             <a href="#shipping" class="nav-link">LOGISTICS</a>
-            <a href="#tiers" class="nav-link">PRE-ORDER</a>
             <a href="#tiers" class="nav-btn">SHOP NOW</a>
         </div>
     </nav>
@@ -227,13 +227,8 @@
     <script>
         function handleCheckout(itemName, price) {
             // Simulated Stripe Checkout Flow
-            // In production, this would redirect to a Stripe Payment Link
             const checkoutUrl = `success.html?item=${encodeURIComponent(itemName)}&price=${price}`;
-            
-            // Track the click for analytics (simulated)
             console.log(`Redirecting to Stripe for ${itemName} at $${price}`);
-            
-            // Redirect to success page
             window.location.href = checkoutUrl;
         }
     </script>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUR STORY | WILDYEAST LABS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .story-hero {
+            padding: 8rem 2rem;
+            background: var(--white);
+            border-bottom: var(--border-width) solid var(--black);
+        }
+        .story-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .story-header {
+            margin-bottom: 4rem;
+        }
+        .story-title {
+            font-size: 4rem;
+            line-height: 1;
+            margin-bottom: 2rem;
+        }
+        .story-lead {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--blue);
+            margin-bottom: 2rem;
+        }
+        .lab-process-section {
+            padding: 6rem 2rem;
+            background: var(--cream);
+            border-bottom: var(--border-width) solid var(--black);
+        }
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        .process-card {
+            border: var(--border-width) solid var(--black);
+            background: var(--white);
+            padding: 3rem;
+            box-shadow: var(--shadow);
+        }
+        .process-step {
+            margin-bottom: 3rem;
+        }
+        .process-step:last-child {
+            margin-bottom: 0;
+        }
+        .step-num {
+            font-family: var(--font-mono);
+            font-size: 1rem;
+            background: var(--black);
+            color: var(--cream);
+            padding: 0.2rem 0.6rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .science-section {
+            padding: 6rem 2rem;
+            border-bottom: var(--border-width) solid var(--black);
+        }
+        .science-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .grain-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            font-family: var(--font-mono);
+        }
+        .grain-table th, .grain-table td {
+            border: 2px solid var(--black);
+            padding: 1rem;
+            text-align: left;
+        }
+        .grain-table th {
+            background: #f1f5f9;
+        }
+        .founder-signature {
+            margin-top: 4rem;
+            font-family: var(--font-mono);
+            font-weight: 700;
+        }
+        .lab-image {
+            width: 100%;
+            border: var(--border-width) solid var(--black);
+            box-shadow: 12px 12px 0px #000;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html" style="text-decoration: none; color: inherit;"><span class="logo-text">WILDYEAST</span></a>
+        </div>
+        <div class="nav-links">
+            <a href="story.html" class="nav-link" style="color: var(--blue);">OUR STORY</a>
+            <a href="index.html#lab-report" class="nav-link">BIOLOGY</a>
+            <a href="index.html#ingredients" class="nav-link">INPUTS</a>
+            <a href="index.html#tiers" class="nav-btn">SHOP NOW</a>
+        </div>
+    </nav>
+
+    <header class="story-hero">
+        <div class="story-container">
+            <div class="tag-badge">THE ELEVATED LABORATORY</div>
+            <h1 class="story-title">FROM MICRO-BAKERY TO INFRASTRUCTURE.</h1>
+            <p class="story-lead">WildYeast was founded to bridge the gap between biological complexity and artisanal success.</p>
+            <div class="story-text">
+                <p>Sourdough is often treated as a mystic art, but at its core, it is a high-precision biological system. For years, home bakers have been trapped in a "Failure Loop" — fighting dormant dehydrated packets and inconsistent supermarket flour. We founded WildYeast to replace that frustration with scientific certainty.</p>
+                <br>
+                <p>Our mission is to provide the "Living Bridge": the infrastructure required to transition home baking from a high-risk hobby into a high-retention lifestyle ritual. We don't just ship ingredients; we ship a proprietary cold-chain biological utility.</p>
+            </div>
+            <div class="founder-signature">
+                SAMUEL | FOUNDER, WILDYEAST LABS
+            </div>
+        </div>
+    </header>
+
+    <section class="lab-process-section">
+        <div class="process-grid">
+            <div class="process-content">
+                <h2 class="section-title" style="margin-bottom: 2rem;">THE LAB PROCESS</h2>
+                <div class="process-step">
+                    <span class="step-num">01</span>
+                    <h3 class="step-title">PEAK CULTIVATION</h3>
+                    <p>Every WildYeast culture is fed with a 100% hydration ratio using Janie's Mill Stone-Milled Heritage Flour. We monitor pH and volume growth for 72 hours until the SCOBY reaches peak microbial density.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-num">02</span>
+                    <h3 class="step-title">THERMAL STABILIZATION</h3>
+                    <p>At the point of peak fermentation (3.8 pH), the culture is moved to a 38°F environment. This enters the yeast into a semi-dormant state, preserving the biological markers for nationwide transit without nutrient exhaustion.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-num">03</span>
+                    <h3 class="step-title">PULSE-SHIPPING</h3>
+                    <p>Utilizing PCM 23 (Phase Change Material), we lock our starters into a stable 71°F climate. This ensures that the organism arriving at your door is the same active culture that left our lab — 99% viability guaranteed.</p>
+                </div>
+            </div>
+            <div class="process-viz">
+                <img src="images/professional-editorial-photography-of-a-.png" alt="WildYeast Laboratory Setup" class="lab-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="science-section">
+        <div class="science-grid">
+            <div class="science-viz">
+                <img src="images/technical-diagram-of-sourdough-fermentat.png" alt="Fermentation Markers" class="lab-image" style="box-shadow: none; border-color: var(--blue);">
+            </div>
+            <div class="science-content">
+                <h2 class="section-title" style="margin-bottom: 2rem;">THE SCIENCE OF GRAINS</h2>
+                <p>The "Vitality Feed" isn't just flour; it's the biological input that determines the cellular structure of your bread. We utilize heritage grains specifically for their microbial diversity and protein density.</p>
+                
+                <table class="grain-table">
+                    <thead>
+                        <tr>
+                            <th>GRAIN</th>
+                            <th>PROTEIN %</th>
+                            <th>BIOLOGICAL BENEFIT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RED FIFE</td>
+                            <td>13.2%</td>
+                            <td>High gluten elasticity for structural rise.</td>
+                        </tr>
+                        <tr>
+                            <td>EINKORN</td>
+                            <td>14.1%</td>
+                            <td>Ancient microbial profile, gut-health focus.</td>
+                        </tr>
+                        <tr>
+                            <td>ORGANIC SPELT</td>
+                            <td>12.8%</td>
+                            <td>High water absorption (hydration stability).</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <p style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;">* ALL INPUTS ARE VERIFIED NON-GMO AND STONE-MILLED TO PRESERVE THE GERM AND ENDOSPERM INTEGRITY.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="waitlist-section" style="background: var(--blue); color: var(--white);">
+        <h2 class="cta-title" style="color: white; border-color: white;">JOIN THE BATCH.</h2>
+        <p class="cta-subtitle">Secure your Founder's Batch infrastructure today. Shipments departing Monday.</p>
+        <a href="index.html#tiers" class="cta-primary" style="background: white; color: var(--blue); text-decoration: none;">PRE-ORDER NOW</a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">WILDYEAST</div>
+            <div class="footer-legal">© 2026 LABORATORY GRADE SOURDOUGH. INVESTOR PORTAL | TERMS | PRIVACY</div>
+        </div>
+    </footer>
+</body>
+</html>
