@@ -1,0 +1,8 @@
+{
+  "name": "WildYeast Waitlist",
+  "columns": [
+    { "name": "email", "type": "text" },
+    { "name": "name", "type": "text" },
+    { "name": "source", "type": "text" }
+  ]
+}
